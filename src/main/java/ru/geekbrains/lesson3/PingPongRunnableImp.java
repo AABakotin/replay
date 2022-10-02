@@ -4,19 +4,22 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
 
-public class PingPongRunnableImp implements Runnable {
-    private  String name;
+public class PingPongRunnableImp extends Thread {
+    private final String name;
+
+    private final Object mon;
 
     private final ReentrantLock lock;
-    private  int times;
+    private final int times;
     private int counter;
 
     private final Condition conditionMet;
 
 
-    public PingPongRunnableImp(String name, int times) {
+    public PingPongRunnableImp(Object mon, String name, int times) {
         this.name = name;
         this.times = times;
+        this.mon = mon;
         this.lock = new ReentrantLock(true);
         this.counter = 1;
         this.conditionMet = lock.newCondition();
@@ -25,19 +28,24 @@ public class PingPongRunnableImp implements Runnable {
 
     @Override
     public void run() {
-        while (counter<=times) {
-            lock.lock();
-            try {
-                conditionMet.await(1, TimeUnit.SECONDS);
-                System.out.println(name + " " + counter);
-                counter++;
-                conditionMet.signal();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            } finally {
-                lock.unlock();
+
+        synchronized (mon) {
+
+            while (counter <= times) {
+                lock.lock();
+                try {
+                    mon.wait(1000);
+                    System.out.println(name + " " + counter);
+                    counter++;
+                    Thread.sleep(500);
+                } catch (InterruptedException e) {
+                    throw new RuntimeException(e);
+                } finally {
+                    lock.unlock();
+                }
             }
         }
+
     }
 }
 
