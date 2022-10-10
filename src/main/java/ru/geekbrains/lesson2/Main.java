@@ -1,5 +1,10 @@
 package ru.geekbrains.lesson2;
 
+import ru.geekbrains.lesson2.linkedList.SimpleLinkedListImpl;
+import ru.geekbrains.lesson2.linkedList.TwoSideLinkedListImpl;
+import ru.geekbrains.lesson2.simpleArrayLIst.ArrayList;
+import ru.geekbrains.lesson2.simpleArrayLIst.SimpleArrayList;
+
 public class Main {
 
 
@@ -43,6 +48,21 @@ public class Main {
 
         System.out.println("First element: " + twoSideLinkedList.getFirst() +  "\n" +
                 "Last element: " + twoSideLinkedList.getLast());
+
+        System.out.println("---------------------");
+
+        SimpleArrayList<Integer> arrayList = new SimpleArrayList<>();
+        arrayList.add(1);
+        arrayList.add(2);
+        arrayList.add(3);
+        arrayList.add(4);
+        arrayList.add(5);
+
+        System.out.println("element by index 1 -> [" + arrayList.getByIndex(1) + "]");
+        arrayList.removeByIndex(2);
+        for (int i = 0; i < arrayList.getSize(); i++) {
+            System.out.println("value array: [" + arrayList.getByIndex(i) + "]");
+        }
 
 
 

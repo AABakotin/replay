@@ -1,4 +1,4 @@
-package ru.geekbrains.lesson2;
+package ru.geekbrains.lesson2.linkedList;
 
 import java.util.Iterator;
 

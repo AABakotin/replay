@@ -2,87 +2,87 @@ package ru.geekbrains.lesson1.builder;
 
 public class Person {
 
-    private String FirstName;
-    private String LastName;
-    private String MiddleName;
-    private String Country;
-    private String Address;
-    private String Phone;
-    private int Age;
-    private String Gender;
+    private String firstName;
+    private String lastName;
+    private String middleName;
+    private String country;
+    private String address;
+    private String phone;
+    private int age;
+    private String gender;
 
     public Person(PeronBuilder peronBuilder) {
-        this.FirstName = peronBuilder.FirstName;
-        this.LastName = peronBuilder.LastName;
-        this.MiddleName = peronBuilder.MiddleName;
-        this.Country = peronBuilder.Country;
-        this.Address = peronBuilder.Address;
-        this.Phone = peronBuilder.Phone;
-        this.Age = peronBuilder.Age;
-        this.Gender = peronBuilder.Gender;
+        this.firstName = peronBuilder.firstName;
+        this.lastName = peronBuilder.lastName;
+        this.middleName = peronBuilder.middleName;
+        this.country = peronBuilder.country;
+        this.address = peronBuilder.address;
+        this.phone = peronBuilder.phone;
+        this.age = peronBuilder.age;
+        this.gender = peronBuilder.gender;
     }
 
     @Override
     public String toString() {
         return "Person{" +
-                "FirstName='" + FirstName + '\'' +
-                ", LastName='" + LastName + '\'' +
-                ", MiddleName='" + MiddleName + '\'' +
-                ", Country='" + Country + '\'' +
-                ", Address='" + Address + '\'' +
-                ", Phone='" + Phone + '\'' +
-                ", Age=" + Age +
-                ", Gender='" + Gender + '\'' +
+                "FirstName='" + firstName + '\'' +
+                ", LastName='" + lastName + '\'' +
+                ", MiddleName='" + middleName + '\'' +
+                ", Country='" + country + '\'' +
+                ", Address='" + address + '\'' +
+                ", Phone='" + phone + '\'' +
+                ", Age=" + age +
+                ", Gender='" + gender + '\'' +
                 '}';
     }
 
     public static class PeronBuilder {
-        private String FirstName;
-        private String LastName;
-        private String MiddleName;
-        private String Country;
-        private String Address;
-        private String Phone;
-        private int Age;
-        private String Gender;
+        private String firstName;
+        private String lastName;
+        private String middleName;
+        private String country;
+        private String address;
+        private String phone;
+        private int age;
+        private String gender;
 
         public PeronBuilder setFirstName(String firstName) {
-            FirstName = firstName;
+            this.firstName = firstName;
             return this;
         }
 
         public PeronBuilder setLastName(String lastName) {
-            LastName = lastName;
+            this.lastName = lastName;
             return this;
         }
 
         public PeronBuilder setMiddleName(String middleName) {
-            MiddleName = middleName;
+            this.middleName = middleName;
             return this;
         }
 
         public PeronBuilder setCountry(String country) {
-            Country = country;
+            this.country = country;
             return this;
         }
 
         public PeronBuilder setAddress(String address) {
-            Address = address;
+            this.address = address;
             return this;
         }
 
         public PeronBuilder setPhone(String phone) {
-            Phone = phone;
+            this.phone = phone;
             return this;
         }
 
         public PeronBuilder setAge(int age) {
-            Age = age;
+            this.age = age;
             return this;
         }
 
         public PeronBuilder setGender(String gender) {
-            Gender = gender;
+            this.gender = gender;
             return this;
         }
 
