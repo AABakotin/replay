@@ -1,7 +1,7 @@
-package ru.geekbrains.lesson_5;
+package ru.geekbrains.lesson5;
 
-import ru.geekbrains.lesson_5.entities.Student;
-import ru.geekbrains.lesson_5.service.ServiceSessionInside;
+import ru.geekbrains.lesson5.entities.Student;
+import ru.geekbrains.lesson5.service.ServiceSessionInside;
 
 import java.util.List;
 

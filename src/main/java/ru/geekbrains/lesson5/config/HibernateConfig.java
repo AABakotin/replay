@@ -1,8 +1,8 @@
-package ru.geekbrains.lesson_5.config;
+package ru.geekbrains.lesson5.config;
 
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
-import ru.geekbrains.lesson_5.entities.Student;
+import ru.geekbrains.lesson5.entities.Student;
 
 public class HibernateConfig {
 
