@@ -1,6 +1,6 @@
-package ru.geekbrains.lesson_5.DAO;
+package ru.geekbrains.lesson5.DAO;
 
-import ru.geekbrains.lesson_5.entities.Student;
+import ru.geekbrains.lesson5.entities.Student;
 
 import java.util.List;
 import java.util.Optional;

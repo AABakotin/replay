@@ -1,9 +1,10 @@
-package ru.geekbrains.lesson_5.service;
+package ru.geekbrains.lesson5.service;
+
 
 import org.hibernate.Session;
-import ru.geekbrains.lesson_5.DAO.StudentDao;
-import ru.geekbrains.lesson_5.config.HibernateConfig;
-import ru.geekbrains.lesson_5.entities.Student;
+import ru.geekbrains.lesson5.DAO.StudentDao;
+import ru.geekbrains.lesson5.config.HibernateConfig;
+import ru.geekbrains.lesson5.entities.Student;
 
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
